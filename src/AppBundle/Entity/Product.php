@@ -50,6 +50,10 @@ class Product
      *
      * @ORM\Column(name="stock", type="integer")
      * @Assert\NotBlank
+     * @Assert\Regex(
+     *     pattern="/\d+/",
+     *     message="Le stock doit être entier"
+     * )
      */
     private $stock;
 
