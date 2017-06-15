@@ -19,6 +19,7 @@ hooks:
     build: |
         rm web/app_dev.php
     deploy: |
+        app/console doctrine:schema:update --force
         app/console --env=prod cache:clear
 
 # The relationships of the application with services or other applications.
