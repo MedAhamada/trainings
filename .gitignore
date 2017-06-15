@@ -12,4 +12,5 @@
 /bin/
 /composer.phar
 /app/config/parameters.yml
+/.idea
 

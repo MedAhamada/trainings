@@ -1,0 +1,34 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:Home:hello{% endblock %}
+
+{% block body %}
+
+    <h1>Hello {{ user }} - {{ age }}</h1>
+
+    <form action="">
+        <input name="person" type="text">
+        <button type="submit">Submit</button>
+    </form>
+    {#
+
+    {% for item in users %}
+        {{ item }} <br>
+    {% else %}
+        Aucun utilisateur
+    {% endfor %}
+
+
+    {% if user == "mohamed" and age >= 18 %}
+        <h1>Welcome {{ user }}</h1>
+    {% elseif age <18 %}
+        vous n'etes pas autorisé à acceder
+    {% else %}
+        Vous n'etes pas Mohamed
+    {% endif %}
+    #}
+{% endblock %}
+
+{#
+commentaire twig
+#}

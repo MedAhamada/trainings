@@ -1,0 +1,14 @@
+app_product:
+    resource: "@AppBundle/Resources/config/routing/product.yml"
+    prefix:   /product
+
+hello:
+    path:     /hello/{name}/{age}
+    defaults: { _controller: AppBundle:Home:hello, name: mohamed }
+    requirements:
+      age: \d+
+    methods: [POST, GET]
+
+index:
+    path:     /
+    defaults: { _controller: AppBundle:Home:index }
