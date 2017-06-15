@@ -24,9 +24,15 @@ class ProductType extends AbstractType
                     'placeholder'=> 'Exp: Toshiba'
                 )
             ))
-            ->add('price', NumberType::class)
-            ->add('description', TextareaType::class)
-            ->add('stock', NumberType::class)
+            ->add('price', NumberType::class, array(
+                'required'  => false
+            ))
+            ->add('description', TextareaType::class, array(
+                'required'  => false
+            ))
+            ->add('stock', NumberType::class, array(
+                'required'  => false
+            ))
         ;
     }
     

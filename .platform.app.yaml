@@ -18,6 +18,7 @@ variables:
 hooks:
     build: |
         rm web/app_dev.php
+        app/console assets:install
     deploy: |
         app/console doctrine:schema:update --force
         app/console --env=prod cache:clear
