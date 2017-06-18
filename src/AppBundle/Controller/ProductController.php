@@ -35,6 +35,7 @@ class ProductController extends Controller
     {
         $product = new Product();
         $form = $this->createForm('AppBundle\Form\ProductType', $product);
+
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

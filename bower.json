@@ -6,5 +6,8 @@
   "description": "",
   "main": "",
   "license": "MIT",
-  "homepage": ""
+  "homepage": "",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
 }

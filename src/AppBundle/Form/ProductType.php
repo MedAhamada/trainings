@@ -3,6 +3,7 @@
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -21,7 +22,8 @@ class ProductType extends AbstractType
                 'required'  => true,
                 'label'     => 'Nom du produit',
                 'attr'      => array(
-                    'placeholder'=> 'Exp: Toshiba'
+                    'placeholder'=> 'Exp: Toshiba',
+                    'class' => 'Test-form'
                 )
             ))
             ->add('price', NumberType::class, array(
@@ -30,7 +32,7 @@ class ProductType extends AbstractType
             ->add('description', TextareaType::class, array(
                 'required'  => false
             ))
-            ->add('stock', NumberType::class, array(
+            ->add('stock', IntegerType::class, array(
                 'required'  => false
             ))
         ;
