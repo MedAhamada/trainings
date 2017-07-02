@@ -20,6 +20,27 @@
         </tbody>
     </table>
 
+    <h3>Category's products</h3>
+    <table class="table">
+        {% for product in category.products %}
+            <tr>
+                <td><a href="{{ path('product_show', { 'id': product.id }) }}">{{ product.id }}</a></td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.stock }}</td>
+                <td>
+                    {% if product.category %}
+                        <a href="{{ path('category_show', {'id': product.category.id}) }}">{{ product.category }}</a>
+                    {% else %}
+                        Aucune
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
     <ul>
         <li>
             <a href="{{ path('category_index') }}">Back to the list</a>

@@ -54,6 +54,12 @@ class Product
      */
     private $stock;
 
+    /**
+     * @var Category
+     *
+     * @ORM\ManyToOne(targetEntity="\AppBundle\Entity\Category", inversedBy="products")
+     */
+    private $category;
 
     /**
      * Get id
@@ -160,5 +166,28 @@ class Product
     {
         return $this->stock;
     }
-}
 
+    /**
+     * Set category
+     *
+     * @param \AppBundle\Entity\Category $category
+     *
+     * @return Product
+     */
+    public function setCategory(\AppBundle\Entity\Category $category = null)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return \AppBundle\Entity\Category
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+}

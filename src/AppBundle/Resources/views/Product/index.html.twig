@@ -11,6 +11,7 @@
                 <th>Price</th>
                 <th>Description</th>
                 <th>Stock</th>
+                <th>Category</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -22,6 +23,13 @@
                 <td>{{ product.price }}</td>
                 <td>{{ product.description }}</td>
                 <td>{{ product.stock }}</td>
+                <td>
+                    {% if product.category %}
+                        <a href="{{ path('category_show', {'id': product.category.id}) }}">{{ product.category }}</a>
+                    {% else %}
+                        Aucune
+                    {% endif %}
+                </td>
                 <td>
                     <ul>
                         <li>

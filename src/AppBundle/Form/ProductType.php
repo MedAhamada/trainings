@@ -2,6 +2,7 @@
 
 namespace AppBundle\Form;
 
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
@@ -34,6 +35,9 @@ class ProductType extends AbstractType
             ))
             ->add('stock', IntegerType::class, array(
                 'required'  => false
+            ))
+            ->add('category', EntityType::class, array(
+                'class' => 'AppBundle:Category'
             ))
         ;
     }
