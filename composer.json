@@ -1,14 +1,14 @@
 {
-    "name": "api-platform/api-platform",
+    "name": "multiinfo/trainings",
     "license": "MIT",
     "type": "project",
-    "description": "The API Platform framework",
-    "homepage": "https://api-platform.com",
+    "description": "Rthe Open Source trainings application",
+    "homepage": "https://trainings.mit.co.ma",
     "authors": [
         {
-            "name": "Kévin Dunglas",
-            "email": "dunglas@gmail.com",
-            "homepage": "https://dunglas.fr"
+            "name": "Agence MIT",
+            "email": "contact@agencemit.com",
+            "homepage": "http://www.agencemit.com"
         }
     ],
     "autoload": {
